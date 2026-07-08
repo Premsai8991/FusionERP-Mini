@@ -1,0 +1,6 @@
+vendor,invoice_number,amount,status
+Oracle Corporation,INV-2001,12000,Pending
+Microsoft,INV-2002,6500,Paid
+Dell Technologies,INV-2003,4300,Pending
+Cisco Systems,INV-2004,8900,Pending
+Amazon Web Services,INV-2004,15750,Paid
