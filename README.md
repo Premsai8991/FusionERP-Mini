@@ -9,14 +9,9 @@ This project was developed to demonstrate enterprise software engineering concep
 
 ## Live Demo
 
-Frontend:
-https://fusion-erp-mini.vercel.app
-
-Backend API:
-https://fusionerp-mini.onrender.com
-
-GitHub Repository:
-https://github.com/Premsai8991/FusionERP-Mini
+- **Live Application:** https://fusion-erp-mini.vercel.app
+- **Backend API:** https://fusionerp-mini.onrender.com
+- **Source Code:** https://github.com/Premsai8991/FusionERP-Mini
 
 ---
 
