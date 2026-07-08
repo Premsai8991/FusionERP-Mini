@@ -73,12 +73,12 @@ function App() {
   );
 
   const fetchInvoices = async () => {
-    const response = await axios.get("http://127.0.0.1:8000/invoices");
+    const response = await axios.get("https://fusionerp-mini.onrender.com/invoices");
     setInvoices(response.data);
   };
 
   const fetchInventory = async () => {
-    const response = await axios.get("http://127.0.0.1:8000/inventory");
+    const response = await axios.get("https://fusionerp-mini.onrender.com/inventory");
     setInventory(response.data);
   };
 
@@ -115,7 +115,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post("http://127.0.0.1:8000/invoices", {
+    const response = await axios.post("https://fusionerp-mini.onrender.com/invoices", {
       vendor: formData.vendor,
       invoice_number: formData.invoice_number,
       amount: Number(formData.amount),
@@ -135,7 +135,7 @@ function App() {
   const handleInventorySubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post("http://127.0.0.1:8000/inventory", {
+    const response = await axios.post("https://fusionerp-mini.onrender.com/inventory", {
       item_code: inventoryForm.item_code,
       item_name: inventoryForm.item_name,
       warehouse: inventoryForm.warehouse,
@@ -164,7 +164,7 @@ function App() {
     data.append("file", file);
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/migration/upload",
+      "https://fusionerp-mini.onrender.com/migration/upload",
       data
     );
 
@@ -173,17 +173,17 @@ function App() {
   };
 
   const deleteInvoice = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/invoices/${id}`);
+    await axios.delete(`https://fusionerp-mini.onrender.com/invoices/${id}`);
     fetchInvoices();
   };
 
   const deleteInventory = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/inventory/${id}`);
+    await axios.delete(`https://fusionerp-mini.onrender.com/inventory/${id}`);
     fetchInventory();
   };
 
   const updateInvoiceStatus = async (id, status) => {
-    await axios.put(`http://127.0.0.1:8000/invoices/${id}/status`, null, {
+    await axios.put(`https://fusionerp-mini.onrender.com/invoices/${id}/status`, null, {
       params: { status },
     });
 
@@ -191,7 +191,7 @@ function App() {
   };
 
   const updateInventoryStatus = async (id, status) => {
-    await axios.put(`http://127.0.0.1:8000/inventory/${id}/status`, null, {
+    await axios.put(`https://fusionerp-mini.onrender.com/inventory/${id}/status`, null, {
       params: { status },
     });
 
@@ -399,7 +399,7 @@ function App() {
           <h3>Recent Accounts Payable Invoices</h3>
 
           <button className="export-btn" onClick={exportInvoicesCSV}>
-            Export Invoices CSV
+            Export Invoices Report
           </button>
 
           <input
@@ -424,7 +424,7 @@ function App() {
             <tbody>
               {filteredInvoices.length === 0 ? (
                 <tr>
-                  <td colSpan="5">No invoices found.</td>
+                  <td colSpan="5">No matching invoices found.</td>
                 </tr>
               ) : (
                 filteredInvoices.map((invoice) => (
@@ -467,7 +467,7 @@ function App() {
 
   <p>Built with React • FastAPI • SQLAlchemy • SQLite • Recharts</p>
 
-  <p>© 2026 Naga Prem Sai Nellure. All Rights Reserved.</p>
+  <p>© 2026 Naga Prem Sai Nellure.</p>
 </footer>
       </main>
     </div>

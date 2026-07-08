@@ -72,7 +72,7 @@ FastAPI backend exposes APIs for:
 Interactive Swagger UI:
 
 ```
-http://127.0.0.1:8000/docs
+https://fusionerp-mini.onrender.com/docs
 ```
 
 ---
@@ -297,13 +297,13 @@ uvicorn main:app --reload
 Backend runs at
 
 ```
-http://127.0.0.1:8000
+https://fusionerp-mini.onrender.com
 ```
 
 Swagger
 
 ```
-http://127.0.0.1:8000/docs
+https://fusionerp-mini.onrender.com/docs
 ```
 
 ---
